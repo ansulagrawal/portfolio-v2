@@ -8,6 +8,16 @@ import React, { useState } from 'react';
 function MobileNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+      document.body.style.overflow = '';
+    } else {
+      setIsMenuOpen(true);
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
   return (
     <nav className="z-10 relative">
       <div className="flex items-center justify-between">
@@ -21,7 +31,7 @@ function MobileNavbar() {
             );
           })}
         </Link>
-        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="burger visible md:hidden">
+        <button onClick={toggleMenu} className="burger visible md:hidden">
           <MenuIcon data-hide={isMenuOpen} />
           <CrossIcon data-hide={!isMenuOpen} />
         </button>

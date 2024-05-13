@@ -30,7 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-bg text-white min-h-dvh w-dvw max-w-7xl m-auto px-5`}>
+      <body className={`${font.className} bg-bg text-white min-h-dvh w-full max-w-7xl m-auto px-5 overflow-y-auto overflow-x-hidden`}>
         <section className="hidden sm:block py-3" id="navbar">
           <Navbar />
         </section>
