@@ -12,7 +12,7 @@ const font = Be_Vietnam_Pro({ subsets: ['latin'], weight: ['300', '400', '500', 
 export const metadata = {
   title: {
     default: siteConfig.title,
-    template: `%s | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.title}`,
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
