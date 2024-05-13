@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'Ansul Agrawal',
-  title: 'Ansul Agrawal - Portfolio',
-  description: 'Ansul Agrawal - Portfolio built using Next.js, Tailwind CSS',
-  keywords: ['Ansul Agrawal, Portfolio, Next.js, Tailwind CSS'],
+  title: 'Ansul Agrawal - Web Developer Portfolio',
+  description: 'Ansul Agrawal - Web Developer Portfolio built using Next.js, Tailwind CSS',
+  keywords: ['Ansul Agrawal, Portfolio, Next.js, Tailwind CSS', 'Web Developer', 'Full Stack Developer'],
   url: 'https://ansulagrawal.in',
   author: [
     {
