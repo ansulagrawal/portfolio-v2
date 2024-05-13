@@ -1,8 +1,11 @@
-import Navbar from '@/components/Navbar';
 import { siteConfig } from '@/config/global';
 import { Be_Vietnam_Pro } from 'next/font/google';
-import './globals.css';
+
+import Footer from '@/components/Footer';
 import MobileNavbar from '@/components/MobileNavbar';
+import Navbar from '@/components/Navbar';
+
+import './globals.css';
 
 const font = Be_Vietnam_Pro({ subsets: ['latin'], weight: ['300', '400', '500', '700'] });
 
@@ -31,10 +34,16 @@ export default function RootLayout({ children }) {
         <section className="hidden sm:block py-3" id="navbar">
           <Navbar />
         </section>
+
         <section className="sm:hidden py-3" id="mobile-navbar">
           <MobileNavbar />
         </section>
+
         {children}
+
+        <section id="footer">
+          <Footer />
+        </section>
       </body>
     </html>
   );
