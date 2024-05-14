@@ -5,7 +5,7 @@ import React from 'react';
 function Hero() {
   return (
     <>
-      <div className="relative w-full pt-20 pb-64 flex justify-center text-center flex-col items-center">
+      <div className="relative w-full pt-20 pb-40 flex justify-center text-center flex-col items-center">
         <p className="text-xl mb-5">Hey, I'm {name}.</p>
         <div className="relative">
           <h1 className="inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-5xl md:text-6xl lg:text-7xl tracking-tighter mb-10 font-bold">

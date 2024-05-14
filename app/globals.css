@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: blue;
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff2;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+
 /* Mobile Navbar */
 
 .burger {
@@ -45,5 +61,28 @@
 
   &:not(#pop1) {
     animation: float 2s infinite ease-in-out;
+  }
+}
+
+/* Title */
+.landing-title::before {
+  content: '';
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100vw;
+  width: 100dvw;
+  @apply bg-fun-pink;
+}
+
+@media (max-width: 768px) {
+  .landing-title::before {
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%, -50%);
+    height: 8px;
+    width: max(150px, 70vw);
   }
 }

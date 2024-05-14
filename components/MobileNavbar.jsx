@@ -38,7 +38,7 @@ function MobileNavbar() {
       </div>
 
       {isMenuOpen && (
-        <ul className="flex flex-col absolute h-[calc(100vh-4.5rem)] w-full bg-bg gap-4 py-10">
+        <ul className="flex flex-col absolute h-[calc(100vh-4.5rem)] w-screen px-5 -left-5 bg-bg gap-4 py-10">
           {routes.map((rt, ind) => (
             <li key={rt.key} className="border-b list-none text-gray-100 border-gray-900 text-sm font-semibold pb-5" style={{ transitionDelay: `${150 + ind * 25}ms` }}>
               <Link href={rt.path}>{rt.title}</Link>
