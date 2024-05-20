@@ -4,6 +4,10 @@ import { TextGenerateEffect } from '../ui/TextGenerateEffect';
 import MagicButton from '../ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa6';
 
+import { FlipWords } from '../ui/FlipWords';
+
+const roles = ['Software Developer', 'MERN Stack Developer', 'Freelancer', 'Open Source Contributor'];
+
 function Hero() {
   return (
     <div className="pb-20 pt-36">
@@ -28,7 +32,9 @@ function Hero() {
 
           <TextGenerateEffect words="Transforming Concepts into Seamless User Experiences" className="text-center text-[40px] md:text-5xl lg:text-6xl" />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">Hi! I&apos;m Ansul Agrawal, a Software Developer based in Navsari, India.</p>
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            Hi! I&apos;m <span className="font-bold text-indigo-300">Ansul Agrawal</span>, a <FlipWords words={roles} /> based in India.
+          </p>
 
           <a href="#about">
             <MagicButton title="Show my work" icon={<FaLocationArrow />} position="right" />
