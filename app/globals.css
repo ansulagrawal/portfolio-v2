@@ -2,87 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-body::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
-}
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-body::-webkit-scrollbar-track {
-  background: blue;
-  display: none;
-}
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-body::-webkit-scrollbar-thumb {
-  background-color: #fff2;
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-}
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-/* Mobile Navbar */
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
 
-.burger {
-  transition: opacity 300ms ease;
-  border: 0;
-  background: transparent;
-  width: 20px;
-  height: 20px;
-  position: relative;
-}
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-.burger svg {
-  transform: translate(-50%, -50%) scale(1);
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-  transition: opacity 300ms ease, transform 300ms ease;
-}
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-.burger svg[data-hide='true'] {
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0);
-}
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
-/* Hero */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
   }
-  50% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0px);
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
-.hero-img {
-  @apply absolute scale-[0.8] lg:scale-100;
-
-  &:not(#pop1) {
-    animation: float 2s infinite ease-in-out;
+@layer base {
+  * {
+    @apply border-border !scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button {
+    @apply active:outline-none;
   }
 }
 
-/* Title */
-.landing-title::before {
-  content: '';
-  position: absolute;
-  left: 105%;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 100vw;
-  width: 100dvw;
-  @apply bg-fun-pink;
-}
-
-@media (max-width: 768px) {
-  .landing-title::before {
-    left: 50%;
-    top: -20px;
-    transform: translate(-50%, -50%);
-    height: 8px;
-    width: max(150px, 70vw);
+@layer utilities {
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
