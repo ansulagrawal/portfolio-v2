@@ -73,3 +73,26 @@ export const gridItems = [
     spareImg: '',
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: 'Aora App',
+    des: 'Experience the future of video sharing with this advanced mobile app! Built using React Native and powered by Appwrite, this app offers a smooth and engaging user experience with stunning animations.',
+    img: '/projects/aora.svg',
+    iconLists: ['/re.svg', '/tail.svg', '/lib/expo.png', '/lib/appWrite.svg'],
+    link: 'https://github.com/ansulagrawal/aora-app',
+    linkTitle: 'aora-app',
+  },
+  {
+    id: 2,
+    title: 'Yoom - Video Conferencing App',
+    des: 'Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.',
+    img: '/projects/yoom.svg',
+    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/stream.svg', '/c.svg'],
+    link: 'https://zoom-clone-ansul.vercel.app',
+    linkTitle: 'yoom',
+  },
+];
+
+export const recentProjects = [projects[0], projects[1]];
